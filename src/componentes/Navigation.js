@@ -19,7 +19,7 @@ const links = [
   },
   {
     label: 'DC',
-    icon: require('../img/marvel-comics-logo-48x20.png'),
+    icon: GiftIcon,
     route: '/DC',
   },
   {
