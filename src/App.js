@@ -7,7 +7,7 @@ import RootLayout from './layout/layout';
 
 function App() {
   return (
-    <div className=" bg-antialiased text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900">
+    <div className=" bg-antialiased text-slate-500 dark:text-slate-400 bg-white dark:bg-gradient-to-r from-blue-950 to-gray-950  ">
       <Router>
         <RootLayout>
           <Routes>

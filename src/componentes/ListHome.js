@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { getPelisInfo, fetchVideoUrl } from '../Api/Services';
 import Modal from 'react-modal';
 import ReactPlayer from 'react-player';
+import Carrucel from './Carrucel';
 
 const ListHome = () => {
   const [pelisList, setPelisList] = useState([]);
@@ -28,20 +29,20 @@ const ListHome = () => {
   };
 
   return (
-    <div className='grid grid-rows-2 grid-flow-col gap-4'>
+    <div className='grid grid-rows-3 grid-flow-col gap-4 pt-10 m-2 p-4 container'>
+ 
       {pelisList.map((peli) => (
         <React.Fragment key={peli.id}>
           <div>
             <button onClick={() => openModal(peli)}>
-              <img src={Img + peli.poster_path} alt={peli.title} className='w-28' />
-              <h2 className='w-28'>{peli.title}</h2>
+              <img src={Img + peli.poster_path} alt={peli.title} className='w-84 rounded-lg' />
             </button>
           </div>
         </React.Fragment>
       ))}
       <Modal isOpen={selectedMovie !== null} onRequestClose={closeModal}>
         {selectedMovie && (
-          <div>
+          <div className="mt-14">
             <img src={Img + selectedMovie.poster_path} alt={selectedMovie.title} className='w-28' />
             <h2>{selectedMovie.title}</h2>
             <p>{selectedMovie.overview}</p>

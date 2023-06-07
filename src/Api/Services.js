@@ -15,6 +15,7 @@ const options = {
 export const getPelisInfo = async () => {
     try {
         const response = await axios.get(`${API_URL}/popular?api_key=${api_key}`, options);
+        console.log(response.data.results)
         return response.data.results;
       } catch (error) {
         console.error('error:', error);

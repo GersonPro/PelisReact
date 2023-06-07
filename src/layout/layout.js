@@ -1,5 +1,5 @@
 import { Navigation } from '../componentes/Navigation';
-import Example from '../componentes/Example'
+import { Example } from '../componentes/Example';
 
 export const metadata = {
   title: 'Create Next App',
@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
         <title>Ipuc Llanaditas</title>
       </head>
       <body>
-<Navigation/>
+<Navigation />
         {children}
       </body>
     </html>
